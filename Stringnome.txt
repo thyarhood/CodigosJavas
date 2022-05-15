@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main(String args[]){
+        
+        String nome,primeironome,segundonome,novonome;
+    
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Digite o seu nome completo: ");
+        nome = sc.nextLine();
+        nome.length();
+        
+        nome.indexOf(" ");
+        
+        primeironome = nome.substring(0,nome.indexOf(" "));
+        primeironome.length();
+        
+        novonome = nome.substring((primeironome.length()+1),nome.length());
+        novonome.indexOf(" ");
+        
+        segundonome = novonome.substring(0,novonome.indexOf(" "));
+        
+        System.out.println(primeironome + " " + segundonome);
+       
+        
+        sc.close();
+        
+    }
+    
+    
+}
