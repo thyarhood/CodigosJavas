@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner sc = new Scanner(System.in);
+	    int valor,menor,maior;
+	    
+	    System.out.println("Digite o 1º numero: ");
+	    valor = sc.nextInt();
+	    
+	    menor = valor;
+	    maior = valor;
+	    
+	    for(int i = 2; i <= 5; i++){
+		System.out.println("Digite o " + i + "ª numero: ");
+		valor = sc.nextInt();
+		
+		    if(valor >= maior){
+		        maior = valor;
+		    }
+		        else if(valor <= menor){
+		            menor = valor;
+		        }
+	    }
+	    
+	    System.out.println("O maior valor é: " + maior);
+	    System.out.println("O menor valor é:" + menor);
+	}
+}
