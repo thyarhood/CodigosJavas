@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main(String args[]){
+        
+        int linhas,linhas1,i,a;
+        
+        Scanner sc = new Scanner(System.in);
+        
+    System.out.println("Digite o numero de linhas: ");
+    linhas = sc.nextInt();
+    
+    linhas1 = linhas;
+    
+        for(a=0;a<linhas;a++){
+            
+        System.out.printf("\n");
+    
+            for(i=linhas; i >= linhas1; i--){
+        
+    System.out.printf("X");
+    
+    
+    
+            }
+    linhas1 = linhas1 -1;
+        }
+
+    }   
+
+}
