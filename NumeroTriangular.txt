@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String args[]) {
+	    
+	    Scanner sc = new Scanner(System.in);
+	    int n = 1;
+	    
+    	 do{
+    	     
+    	 int i = 2, j = 0, resto = 0,guardaresultado = 0, guardaresultadomaior = 0, guardai = 0, guardaimaior = 0, resultado = 0, resultado1 = 0, resultadofinal = 0;
+ 
+	     System.out.println("Digite um numero para verificaçao: ");   
+	     n = sc.nextInt();
+	     
+	     do{
+	         resto = n%i;
+	         if(resto == 0){
+	             guardaresultado = n/i;
+	         }
+	         
+	         j =i;
+	         
+	         if(guardaresultado > guardaresultadomaior){
+	             guardaresultadomaior = guardaresultado;
+	             guardai = j;
+	             
+	             System.out.println(guardai);
+	             
+	         }
+	             i ++;
+	         }while(i < n);
+	         
+	         resultado = guardai + 1;
+	         resultado1 = guardai + 2;
+	         resultadofinal = guardai * resultado * resultado1;
+	     
+	     if(resultadofinal == n){
+	         System.out.println("O numero digitado é um numero tringular");
+	     }
+	     else{
+	         System.out.println("O numero digitado não é numero triangular");
+	     }
+	    
+	    }while(n != 0);
+	
+	}
+}
