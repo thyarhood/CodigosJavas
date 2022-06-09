@@ -1,0 +1,51 @@
+// Número triangular é um número que é o produto de três números consecutivos multiplicados
+//EXEMPLO: 2 * 3 * 4 = 24
+//O algoritmo para quando o numero 0 for digitado
+
+import java.util.Scanner;
+
+public class NumeroTriangular {
+	public static void main(String args[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		int n = 1;
+		
+		while(n != 0 ) {
+		
+		int i = 1, j = 1, resultado = 1, nao_triangular = 0;
+			
+		System.out.println("Digite um numero para verificaçao: ");
+		n = sc.nextInt();
+		
+			while(i < n) {
+				
+				resultado = j * resultado;
+				
+				if(resultado > n) {
+					i = n +1;
+					nao_triangular = 1;
+				}
+				
+				
+				if(resultado == n) {
+				System.out.println("O numero digitado e tringular\n");
+				i = n +1;
+				}
+				
+				if(i > 3 ) {
+					resultado = resultado/(j - 2);
+				}
+
+				i++;
+				j++;
+					
+			}
+			if(nao_triangular == 1 ) {
+				System.out.println("O numero nao e um numero triangular\n");
+			}
+			
+		}
+		System.out.println("Processo finalizado");
+		sc.close();
+	}
+}
